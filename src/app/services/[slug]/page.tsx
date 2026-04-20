@@ -243,7 +243,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
           </Reveal>
           <Reveal delay={60}>
             <h2 className="mt-5 font-heading font-extrabold text-background text-3xl md:text-5xl leading-tight max-w-2xl">
-              California neighborhoods we serve for {s.name.toLowerCase()}.
+              Miami-Dade neighborhoods we serve for {s.name.toLowerCase()}.
             </h2>
           </Reveal>
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5">

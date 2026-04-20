@@ -15,9 +15,9 @@ export const metadata: Metadata = {
   keywords: [
     'air duct cleaning blog',
     'indoor air quality tips',
-    'California HVAC advice',
+    'Florida HVAC advice',
     'dryer vent safety',
-    'wildfire air quality',
+    'hurricane air quality',
     'mold in ducts',
   ],
   alternates: { canonical: '/blog/' },
@@ -46,7 +46,7 @@ export default function BlogIndexPage() {
             Honest guides from <br /><span className="text-secondary">the field.</span>
           </>
         }
-        subtitle="What our technicians learn on California homes every week, written plainly for homeowners and property managers."
+        subtitle="What our technicians learn on Miami-Dade homes every week, written plainly for homeowners and property managers."
       />
 
       <section className="relative py-12 md:py-20 lg:py-28 bg-background">

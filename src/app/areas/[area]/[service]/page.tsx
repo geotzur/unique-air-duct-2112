@@ -84,7 +84,7 @@ export default function AreaServicePage({
         <Swoosh variant={1} opacity={0.1} className="-left-20 top-20 w-[800px]" />
         <div className="relative max-w-6xl mx-auto px-4 md:px-6 lg:px-8 grid lg:grid-cols-5 gap-10 items-center">
           <div className="lg:col-span-3">
-            <p className="section-label">California · Local Service</p>
+            <p className="section-label">Miami-Dade · Local Service</p>
             <h1
               className="mt-5 font-heading font-black uppercase leading-[0.95] tracking-tight2"
               style={{ fontSize: 'clamp(40px,5vw,72px)' }}
@@ -104,7 +104,7 @@ export default function AreaServicePage({
             <div className="lg:col-span-2 relative aspect-[4/5] rounded-bento overflow-hidden shadow-deep border-4 border-background/70">
               <Image
                 src={areaImg}
-                alt={`${a.name}, California`}
+                alt={`${a.name}, Florida`}
                 fill
                 priority
                 style={{ objectFit: 'cover' }}

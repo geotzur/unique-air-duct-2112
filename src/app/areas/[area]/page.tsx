@@ -80,7 +80,7 @@ export default function AreaDetailPage({ params }: { params: { area: string } })
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
-          <p className="section-label">California · Service Area</p>
+          <p className="section-label">Miami-Dade · Service Area</p>
           <h1 className="mt-5 font-heading font-extrabold text-textPrimary text-4xl md:text-5xl lg:text-6xl leading-[0.95] tracking-tight2 max-w-3xl">
             Air Duct Cleaning in <span className="text-primary">{a.name}</span>
           </h1>
@@ -99,7 +99,7 @@ export default function AreaDetailPage({ params }: { params: { area: string } })
             <div className="relative aspect-[21/9] rounded-bento overflow-hidden shadow-deep border-4 border-background/50">
               <Image
                 src={img}
-                alt={`${a.name}, California`}
+                alt={`${a.name}, Florida`}
                 fill
                 priority
                 style={{ objectFit: 'cover' }}
@@ -199,7 +199,7 @@ export default function AreaDetailPage({ params }: { params: { area: string } })
               We come to {a.name} — fast.
             </h3>
             <ul className="mt-6 space-y-3 text-textSecondary text-[15px]">
-              <li className="flex gap-3 items-start"><MapPin size={18} className="text-primary shrink-0 mt-0.5" /> Dispatched from: 8432 Beverly Blvd, Los Angeles, CA</li>
+              <li className="flex gap-3 items-start"><MapPin size={18} className="text-primary shrink-0 mt-0.5" /> Dispatched from: 8432 NW 36th Street, Miami, FL</li>
               <li className="flex gap-3 items-start"><Phone size={18} className="text-primary shrink-0 mt-0.5" /> {company.phone}</li>
               <li className="flex gap-3 items-start"><span className="w-4 h-4 mt-0.5 inline-block rounded-full bg-secondary" /> Average response in {a.name}: under 3 hours</li>
             </ul>
@@ -209,7 +209,7 @@ export default function AreaDetailPage({ params }: { params: { area: string } })
             <div className="relative text-center text-background px-6">
               <MapPin size={36} className="text-secondary mx-auto" />
               <div className="mt-4 font-heading font-black uppercase text-3xl md:text-4xl">{a.name}</div>
-              <div className="mt-1 text-background/75 text-[13px] font-body font-semibold uppercase tracking-stamp">California</div>
+              <div className="mt-1 text-background/75 text-[13px] font-body font-semibold uppercase tracking-stamp">Florida</div>
             </div>
           </div>
         </div>

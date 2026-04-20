@@ -12,14 +12,14 @@ export const metadata: Metadata = {
   title: {
     absolute: `Areas We Serve | ${company.name} ${company.city}, ${company.state}`,
   },
-  description: `Full-service NADCA-certified air duct cleaning across ${company.city} and the greater ${company.state_full} area — Beverly Hills, Santa Monica, Pasadena, Long Beach, Burbank, Glendale, Hollywood, and Culver City.`,
+  description: `Full-service NADCA-certified air duct cleaning across ${company.city} and Miami-Dade County — Miami Beach, Coral Gables, Coconut Grove, Key Biscayne, Aventura, Doral, Kendall, and Homestead.`,
   keywords: [
     `air duct cleaning ${company.city}`,
     `service areas ${company.state_full}`,
-    'Beverly Hills duct cleaning',
-    'Santa Monica duct cleaning',
-    'Pasadena air duct cleaning',
-    'Long Beach duct cleaning',
+    'Miami Beach duct cleaning',
+    'Coral Gables duct cleaning',
+    'Coconut Grove air duct cleaning',
+    'Homestead duct cleaning',
   ],
   alternates: { canonical: '/areas/' },
   openGraph: {
@@ -44,7 +44,7 @@ export default function AreasIndexPage() {
         section="03"
         title={
           <>
-            Serving California,<br /><span className="text-secondary">neighborhood by neighborhood.</span>
+            Serving Miami-Dade,<br /><span className="text-secondary">neighborhood by neighborhood.</span>
           </>
         }
         subtitle="We live here too. Every area we serve gets a crew that knows its construction style, its climate, and its air."
@@ -65,7 +65,7 @@ export default function AreasIndexPage() {
                     {img ? (
                       <Image
                         src={img}
-                        alt={`${a.name}, California`}
+                        alt={`${a.name}, Florida`}
                         fill
                         style={{ objectFit: 'cover' }}
                         sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
@@ -91,7 +91,7 @@ export default function AreasIndexPage() {
                       </h3>
                       <div className="mt-2 text-secondary text-[12px] font-body font-semibold uppercase tracking-stamp">
                         <span className="inline-block w-1.5 h-1.5 rounded-full bg-secondary mr-2 align-middle" />
-                        {services.length} services · California
+                        {services.length} services · Miami-Dade
                       </div>
                     </div>
                   </Link>

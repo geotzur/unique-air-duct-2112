@@ -36,16 +36,16 @@ export function LocalBusinessJsonLd({
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '8432 Beverly Blvd, Suite 210',
+      streetAddress: '8432 NW 36th Street, Suite 210',
       addressLocality: company.city,
       addressRegion: company.state,
-      postalCode: '90048',
+      postalCode: '33166',
       addressCountry: 'US',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 34.0522,
-      longitude: -118.2437,
+      latitude: 25.7617,
+      longitude: -80.1918,
     },
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -75,8 +75,8 @@ export function LocalBusinessJsonLd({
       '@type': 'GeoCircle',
       geoMidpoint: {
         '@type': 'GeoCoordinates',
-        latitude: 34.0522,
-        longitude: -118.2437,
+        latitude: 25.7617,
+        longitude: -80.1918,
       },
       geoRadius: '50000',
     },

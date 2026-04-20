@@ -82,21 +82,46 @@ function FeaturedCell({ s }: { s: typeof services[number] }) {
 }
 
 function BentoCell({ s }: { s: typeof services[number] }) {
+  const img = getServiceImage(s.slug);
   return (
     <Link
       href={`/services/${s.slug}/`}
-      className="group relative bg-background rounded-card overflow-hidden shadow-whisper border border-border hover:shadow-glow hover:-translate-y-0.5 transition-all duration-500"
+      className="group relative bg-background rounded-card overflow-hidden shadow-whisper border border-border hover:shadow-glow hover:-translate-y-0.5 transition-all duration-500 flex flex-col h-full"
     >
       <span className="sweep-border" aria-hidden="true" />
-      <div className="relative p-6">
-        <IconDisc slug={s.slug} />
-        <h3 className="mt-5 font-heading font-extrabold text-xl text-textPrimary leading-tight">
+      {/* Image header */}
+      <div className="relative h-36 sm:h-40 md:h-36 lg:h-40 overflow-hidden shrink-0">
+        {img ? (
+          <Image
+            src={img}
+            alt={s.name}
+            fill
+            style={{ objectFit: 'cover' }}
+            sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 100vw"
+            className="transition-transform duration-[1200ms] group-hover:scale-105"
+          />
+        ) : (
+          <div
+            className="w-full h-full"
+            style={{ backgroundImage: fallbackGradient(s.slug) }}
+          />
+        )}
+        <span
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-t from-background/55 via-transparent to-transparent"
+        />
+        <div className="absolute -bottom-6 left-5 z-10">
+          <IconDisc slug={s.slug} />
+        </div>
+      </div>
+      <div className="relative p-5 pt-9 md:p-6 md:pt-10 flex flex-col flex-1">
+        <h3 className="font-heading font-extrabold text-lg md:text-xl text-textPrimary leading-tight">
           {s.name}
         </h3>
-        <p className="mt-2 text-textSecondary text-[14px] leading-relaxed line-clamp-3">
+        <p className="mt-2 text-textSecondary text-[13px] md:text-[14px] leading-relaxed line-clamp-3">
           {s.short_description}
         </p>
-        <span className="mt-4 inline-flex items-center gap-1.5 font-body font-bold text-primary text-[14px]">
+        <span className="mt-auto pt-4 inline-flex items-center gap-1.5 font-body font-bold text-primary text-[14px]">
           Learn more
           <ArrowUpRight size={15} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
         </span>
@@ -130,7 +155,7 @@ export default function Services() {
           <Reveal delay={120}>
             <p className="max-w-md text-textSecondary text-[15px] md:text-[16px] leading-relaxed">
               Every home and business has its own story. From full-home duct cleanings to emergency mold
-              remediation, here's the full menu of what our NADCA-certified crews do every day across California.
+              remediation, here's the full menu of what our NADCA-certified crews do every day across Miami-Dade.
             </p>
           </Reveal>
         </div>

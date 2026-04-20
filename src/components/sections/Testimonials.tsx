@@ -99,7 +99,7 @@ export default function Testimonials() {
       />
       <div className="relative max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <Reveal>
-          <SectionLabel number="07" text="Voices of California" />
+          <SectionLabel number="07" text="Voices of Miami-Dade" />
         </Reveal>
         <div className="mt-6 flex flex-col md:flex-row md:items-end justify-between gap-5 md:gap-10">
           <Reveal>
@@ -109,7 +109,7 @@ export default function Testimonials() {
           </Reveal>
           <Reveal delay={120}>
             <p className="max-w-md text-textSecondary text-[15px] md:text-[16px] leading-relaxed">
-              Nearly 60% of our work comes from word of mouth. Here's what California neighbors are saying about
+              Nearly 60% of our work comes from word of mouth. Here's what Miami-Dade neighbors are saying about
               the air they breathe now.
             </p>
           </Reveal>

@@ -61,7 +61,7 @@ export default function PrivacyPage() {
           <Reveal delay={240}>
             <h2 className="mt-10 font-heading font-extrabold text-textPrimary text-2xl md:text-3xl">Your Rights</h2>
             <p className="mt-4 text-textSecondary text-[16px] leading-relaxed">
-              California residents may request a summary of information we hold, deletion of that information, or
+              Florida residents may request a summary of information we hold, deletion of that information, or
               opt-out of marketing communications at any time by emailing us. We respond within 30 days.
             </p>
           </Reveal>

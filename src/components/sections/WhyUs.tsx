@@ -49,7 +49,7 @@ export default function WhyUs() {
         <Reveal delay={80}>
           <div className="mt-6 ribbon inline-block" style={{ transform: 'rotate(1deg)', padding: '16px 42px 16px 26px' }}>
             <h2 className="font-heading font-extrabold text-textPrimary text-3xl sm:text-4xl md:text-5xl leading-tight">
-              Why California Chooses Us
+              Why Miami-Dade Chooses Us
             </h2>
           </div>
         </Reveal>

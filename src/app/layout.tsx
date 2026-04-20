@@ -16,23 +16,23 @@ export const metadata: Metadata = {
     template: `%s | ${company.name} — ${company.city}, ${company.state}`,
   },
   description:
-    'NADCA-certified air duct, dryer vent, and HVAC cleaning across Los Angeles and the greater California area. Photographed before-and-after on every job. Free estimates, same-day service.',
+    'NADCA-certified air duct, dryer vent, and HVAC cleaning across Miami-Dade County and South Florida. Photographed before-and-after on every job. Free estimates, same-day service.',
   keywords: [
-    'air duct cleaning Los Angeles',
-    'air duct cleaning California',
+    'air duct cleaning Miami',
+    'air duct cleaning Miami-Dade',
     'duct cleaning near me',
     'NADCA certified duct cleaner',
-    'HVAC cleaning Los Angeles',
-    'dryer vent cleaning California',
+    'HVAC cleaning Miami',
+    'dryer vent cleaning Florida',
     'mold remediation air ducts',
-    'indoor air quality Los Angeles',
-    'residential duct cleaning LA',
-    'commercial duct cleaning California',
-    'chimney sweep Los Angeles',
+    'indoor air quality Miami',
+    'residential duct cleaning Miami-Dade',
+    'commercial duct cleaning Florida',
+    'chimney sweep Miami',
     'UV air purification installation',
-    'attic insulation replacement California',
+    'attic insulation replacement Florida',
     'coil and blower cleaning',
-    'HVAC sanitization California',
+    'HVAC sanitization Florida',
   ],
   metadataBase: new URL(SITE_URL),
   alternates: {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${company.name} | ${company.type} in ${company.city}, ${company.state}`,
     description:
-      'NADCA-certified duct, vent, and HVAC cleaning across Los Angeles and California. Before-and-after photos, same-day service, free estimates.',
+      'NADCA-certified duct, vent, and HVAC cleaning across Miami-Dade and South Florida. Before-and-after photos, same-day service, free estimates.',
     type: 'website',
     locale: 'en_US',
     url: SITE_URL,
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${company.name} | ${company.type} in ${company.city}, ${company.state}`,
     description:
-      'NADCA-certified duct, vent, and HVAC cleaning across Los Angeles and California.',
+      'NADCA-certified duct, vent, and HVAC cleaning across Miami-Dade and South Florida.',
     images: ['/logo.jpg'],
   },
   robots: {
@@ -86,8 +86,8 @@ export const metadata: Metadata = {
   other: {
     'geo.region': `US-${company.state}`,
     'geo.placename': `${company.city}, ${company.state_full}`,
-    'geo.position': '34.0522;-118.2437',
-    ICBM: '34.0522, -118.2437',
+    'geo.position': '25.7617;-80.1918',
+    ICBM: '25.7617, -80.1918',
   },
 };
 

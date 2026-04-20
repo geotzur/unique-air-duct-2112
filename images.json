@@ -10,14 +10,14 @@
     "residential-air-duct-cleaning": "/images/service-residential-air-duct-cleaning.jpg"
   },
   "areas": {
-    "beverly-hills": "/images/area-beverly-hills.jpg",
-    "burbank": "/images/area-burbank.jpg",
-    "culver-city": "/images/area-culver-city.jpg",
-    "glendale": "/images/area-glendale.jpg",
-    "hollywood": "/images/area-hollywood.jpg",
-    "long-beach": "/images/area-long-beach.jpg",
-    "pasadena": "/images/area-pasadena.jpg",
-    "santa-monica": "/images/area-santa-monica.jpg"
+    "miami-beach": "/images/area-beverly-hills.jpg",
+    "coral-gables": "/images/area-pasadena.jpg",
+    "coconut-grove": "/images/area-hollywood.jpg",
+    "key-biscayne": "/images/area-santa-monica.jpg",
+    "aventura": "/images/area-glendale.jpg",
+    "doral": "/images/area-burbank.jpg",
+    "kendall": "/images/area-culver-city.jpg",
+    "homestead": "/images/area-long-beach.jpg"
   },
   "before_after": {
     "residential-air-duct-cleaning": {
@@ -31,8 +31,7 @@
     "service:mold-remediation-in-air-ducts": "/images/service-dryer-vent-cleaning.jpg",
     "service:chimney-sweep-and-inspection": "/images/service-hvac-system-sanitization.jpg",
     "service:uv-air-purification-installation": "/images/service-residential-air-duct-cleaning.jpg",
-    "service:coil-and-blower-cleaning": "/images/service-commercial-air-duct-cleaning.jpg",
-    "area:culver-city": "/images/area-beverly-hills.jpg"
+    "service:coil-and-blower-cleaning": "/images/service-commercial-air-duct-cleaning.jpg"
   },
   "icons": {
     "attic-insulation-replacement": "/icons/service-attic-insulation-replacement.svg",

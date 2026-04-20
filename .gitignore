@@ -4,6 +4,7 @@ out/
 *.DS_Store
 .env
 .env.local
+.netlify/
 company_info.json
 content.json
 logo_analysis.json

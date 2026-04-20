@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     `air duct cleaning services ${company.city}`,
     `HVAC cleaning ${company.state_full}`,
     'NADCA certified services',
-    'dryer vent cleaning Los Angeles',
-    'mold remediation California',
+    'dryer vent cleaning Miami',
+    'mold remediation Florida',
   ],
   alternates: { canonical: '/services/' },
   openGraph: {
@@ -45,7 +45,7 @@ export default function ServicesIndexPage() {
         title={
           <>
             Every way we bring <br />
-            <span className="text-secondary">new air</span> to California.
+            <span className="text-secondary">new air</span> to Miami-Dade.
           </>
         }
         subtitle="Ten specialty services, all performed by full-time NADCA-certified employees — no subcontractors, no surprises, no shortcuts."

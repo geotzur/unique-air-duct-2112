@@ -26,7 +26,7 @@ function AreaCard({
       {img ? (
         <Image
           src={img}
-          alt={`${a.name}, California`}
+          alt={`${a.name}, Florida`}
           fill
           style={{ objectFit: 'cover' }}
           sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
@@ -83,7 +83,7 @@ export default function Areas() {
             style={{ transform: 'rotate(-1deg)', padding: '16px 42px 16px 26px' }}
           >
             <h2 className="font-heading font-extrabold text-textPrimary text-3xl sm:text-4xl md:text-5xl leading-tight">
-              Service Areas Across California
+              Service Areas Across Miami-Dade
             </h2>
           </div>
         </Reveal>
@@ -102,7 +102,7 @@ export default function Areas() {
               href="/areas/"
               className="inline-flex items-center gap-2 font-body font-bold text-secondary hover:text-background transition-colors"
             >
-              View all California service areas →
+              View all Miami-Dade service areas →
             </Link>
           </div>
         </Reveal>

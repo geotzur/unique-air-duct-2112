@@ -13,10 +13,10 @@ export default function Hero() {
   const heroImg = getHeroImage();
 
   // Split headline into three lines for the tilted ribbon stack
-  const lines = ['Breathe Cleaner', 'California', 'Air'];
+  const lines = ['Breathe Cleaner', 'Miami', 'Air'];
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-28 md:pt-32 pb-16 md:pb-24">
+    <section className="relative min-h-[92vh] md:min-h-screen flex items-center overflow-hidden pt-24 md:pt-32 pb-20 md:pb-24">
       {/* Gradient background */}
       <div
         aria-hidden="true"
@@ -58,7 +58,7 @@ export default function Hero() {
           <div className="absolute right-4 top-1/2 -translate-y-1/2 w-[85%] h-[85%] rounded-[40px] overflow-hidden shadow-deep border-4 border-background/10">
             <Image
               src={heroImg}
-              alt="Technician performing duct cleaning in a California home"
+              alt="Technician performing duct cleaning in a Miami home"
               fill
               priority
               style={{ objectFit: 'cover' }}
@@ -90,14 +90,13 @@ export default function Hero() {
               return (
                 <div
                   key={i}
-                  className="ribbon animate-ribbonIn"
+                  className="ribbon animate-ribbonIn max-w-full"
                   style={{
                     transform: `rotate(${tilts[i]}deg)`,
                     animationDelay: `${0.12 * i}s`,
-                    padding: '14px 42px 14px 26px',
                   }}
                 >
-                  <span className="font-heading font-black uppercase tracking-tight2 text-textPrimary leading-[0.95] text-[clamp(42px,7vw,96px)] block">
+                  <span className="font-heading font-black uppercase tracking-tight2 text-textPrimary leading-[0.95] text-[clamp(34px,8vw,96px)] block">
                     {line}
                   </span>
                 </div>
@@ -141,7 +140,7 @@ export default function Hero() {
           <div className="lg:hidden relative mt-4 mx-auto w-[90%] aspect-[4/5] rounded-[28px] overflow-hidden shadow-deep border-4 border-background/10">
             <Image
               src={heroImg}
-              alt="Technician performing duct cleaning in a California home"
+              alt="Technician performing duct cleaning in a Miami home"
               fill
               priority
               style={{ objectFit: 'cover' }}

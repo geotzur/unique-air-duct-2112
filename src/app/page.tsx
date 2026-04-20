@@ -37,12 +37,12 @@ export const metadata: Metadata = {
     absolute: `${company.name} | Air Duct Cleaning in ${company.city}, ${company.state} | Free Estimates`,
   },
   description:
-    'NADCA-certified air duct, dryer vent, and HVAC cleaning across Los Angeles and the greater California area. Photographed before-and-after on every job. Same-day service and free estimates.',
+    'NADCA-certified air duct, dryer vent, and HVAC cleaning across Miami-Dade County and South Florida. Photographed before-and-after on every job. Same-day service and free estimates.',
   alternates: { canonical: '/' },
   openGraph: {
     title: `${company.name} | Air Duct Cleaning in ${company.city}, ${company.state}`,
     description:
-      'NADCA-certified duct, vent, and HVAC cleaning across Los Angeles and California. Photographed before-and-after proof on every job.',
+      'NADCA-certified duct, vent, and HVAC cleaning across Miami-Dade and South Florida. Photographed before-and-after proof on every job.',
     url: '/',
     type: 'website',
   },

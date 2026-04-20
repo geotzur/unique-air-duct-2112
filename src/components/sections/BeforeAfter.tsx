@@ -79,7 +79,7 @@ export default function BeforeAfter() {
         </Reveal>
         <Reveal delay={140}>
           <p className="mt-5 text-background/75 text-[15px] md:text-[17px] leading-relaxed max-w-2xl">
-            Drag the handle to reveal a real California home's duct, before and after our team touched it.
+            Drag the handle to reveal a real Miami-Dade home's duct, before and after our team touched it.
             Every job, every time — we photograph what we clean.
           </p>
         </Reveal>
