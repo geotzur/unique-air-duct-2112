@@ -3,29 +3,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { services } from '@/lib/data';
-import { getServiceImage, getServiceIcon, fallbackGradient } from '@/lib/images';
+import { getServiceImage, fallbackGradient } from '@/lib/images';
 import SectionLabel from '@/components/SectionLabel';
 import Swoosh from '@/components/Swoosh';
 import Reveal from '@/components/Reveal';
 import { ArrowUpRight } from 'lucide-react';
-
-function IconDisc({ slug }: { slug: string }) {
-  const icon = getServiceIcon(slug);
-  if (!icon) return null;
-  return (
-    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primaryLight shadow-whisper transition-transform duration-500 group-hover:rotate-[8deg] group-hover:-translate-y-0.5">
-      <img
-        src={icon}
-        alt=""
-        aria-hidden="true"
-        width={26}
-        height={26}
-        className="transition-transform duration-500 group-hover:-rotate-6"
-        style={{ filter: 'brightness(0) saturate(100%) invert(16%) sepia(87%) saturate(4050%) hue-rotate(282deg) brightness(82%) contrast(101%)' }}
-      />
-    </div>
-  );
-}
 
 function FeaturedCell({ s }: { s: typeof services[number] }) {
   const img = getServiceImage(s.slug);
@@ -61,7 +43,6 @@ function FeaturedCell({ s }: { s: typeof services[number] }) {
       </div>
       <div className="relative p-7 md:p-9">
         <div className="flex items-center gap-3 mb-3">
-          <IconDisc slug={s.slug} />
           <span className="inline-flex items-center gap-2 font-heading font-bold uppercase tracking-stamp text-[11px] text-primary">
             Featured · Most Requested
           </span>
@@ -110,11 +91,8 @@ function BentoCell({ s }: { s: typeof services[number] }) {
           aria-hidden="true"
           className="absolute inset-0 bg-gradient-to-t from-background/55 via-transparent to-transparent"
         />
-        <div className="absolute -bottom-6 left-5 z-10">
-          <IconDisc slug={s.slug} />
-        </div>
       </div>
-      <div className="relative p-5 pt-9 md:p-6 md:pt-10 flex flex-col flex-1">
+      <div className="relative p-5 md:p-6 flex flex-col flex-1">
         <h3 className="font-heading font-extrabold text-lg md:text-xl text-textPrimary leading-tight">
           {s.name}
         </h3>

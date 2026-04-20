@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { services, areas, phoneHref, company } from '@/lib/data';
-import { getServiceImage, getServiceIcon, getBeforeAfter, fallbackGradient } from '@/lib/images';
+import { getServiceImage, getBeforeAfter, fallbackGradient } from '@/lib/images';
 import Reveal from '@/components/Reveal';
 import PillButton from '@/components/PillButton';
 import ServiceTabs from '@/components/ServiceTabs';
@@ -51,7 +51,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
   const s = services.find(x => x.slug === params.slug);
   if (!s) return notFound();
   const img = getServiceImage(s.slug);
-  const icon = getServiceIcon(s.slug);
   const pair = getBeforeAfter(s.slug);
 
   return (
@@ -116,23 +115,6 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
             )}
           </div>
         </div>
-        {/* Floating icon mark at the bottom-left intersection */}
-        {icon && (
-          <div className="relative max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-            <div
-              aria-hidden="true"
-              className="absolute -top-14 md:-top-16 left-4 md:left-12 w-24 h-24 md:w-28 md:h-28 rounded-full bg-primaryLight shadow-glow border-4 border-background flex items-center justify-center z-20"
-            >
-              <img
-                src={icon}
-                alt=""
-                width={56}
-                height={56}
-                style={{ filter: 'brightness(0) saturate(100%) invert(16%) sepia(87%) saturate(4050%) hue-rotate(282deg) brightness(82%) contrast(101%)' }}
-              />
-            </div>
-          </div>
-        )}
       </section>
 
       {/* Tabbed content */}

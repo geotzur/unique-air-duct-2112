@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { areas, services, company, phoneHref, content } from '@/lib/data';
-import { getAreaImage, getServiceIcon, fallbackGradient } from '@/lib/images';
+import { getAreaImage, getServiceImage, fallbackGradient } from '@/lib/images';
 import Reveal from '@/components/Reveal';
 import PillButton from '@/components/PillButton';
 import Swoosh from '@/components/Swoosh';
@@ -59,8 +59,8 @@ export default function AreaServicePage({
   const a = areas.find(x => x.slug === params.area);
   const s = services.find(x => x.slug === params.service);
   if (!a || !s) return notFound();
-  const icon = getServiceIcon(s.slug);
   const areaImg = getAreaImage(a.slug);
+  const serviceImg = getServiceImage(s.slug);
 
   return (
     <>
@@ -100,24 +100,26 @@ export default function AreaServicePage({
               <PillButton href={phoneHref} variant="ghost-dark"><Phone size={16} /> {company.phone}</PillButton>
             </div>
           </div>
-          {areaImg && (
+          {(areaImg || serviceImg) && (
             <div className="lg:col-span-2 relative aspect-[4/5] rounded-bento overflow-hidden shadow-deep border-4 border-background/70">
-              <Image
-                src={areaImg}
-                alt={`${a.name}, Florida`}
-                fill
-                priority
-                style={{ objectFit: 'cover' }}
-                sizes="(min-width: 1024px) 40vw, 100vw"
-              />
-              {icon && (
-                <div className="absolute -bottom-6 -left-6 w-20 h-20 rounded-full bg-primaryLight border-4 border-background shadow-glow flex items-center justify-center">
-                  <img
-                    src={icon}
-                    alt=""
-                    width={40}
-                    height={40}
-                    style={{ filter: 'brightness(0) saturate(100%) invert(16%) sepia(87%) saturate(4050%) hue-rotate(282deg) brightness(82%) contrast(101%)' }}
+              {areaImg && (
+                <Image
+                  src={areaImg}
+                  alt={`${a.name}, Florida`}
+                  fill
+                  priority
+                  style={{ objectFit: 'cover' }}
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                />
+              )}
+              {serviceImg && (
+                <div className="absolute -bottom-6 -left-6 w-32 h-32 md:w-36 md:h-36 rounded-bento border-4 border-background shadow-glow overflow-hidden">
+                  <Image
+                    src={serviceImg}
+                    alt={s.name}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="144px"
                   />
                 </div>
               )}

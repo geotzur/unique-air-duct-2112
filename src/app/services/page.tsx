@@ -5,7 +5,7 @@ import PageHero from '@/components/PageHero';
 import Reveal from '@/components/Reveal';
 import CTA from '@/components/sections/CTA';
 import { services, company } from '@/lib/data';
-import { getServiceImage, getServiceIcon, fallbackGradient } from '@/lib/images';
+import { getServiceImage, fallbackGradient } from '@/lib/images';
 import { BreadcrumbJsonLd } from '@/components/JsonLd';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -57,7 +57,6 @@ export default function ServicesIndexPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((s, i) => {
               const img = getServiceImage(s.slug);
-              const icon = getServiceIcon(s.slug);
               return (
                 <Reveal key={s.slug} delay={(i % 3) * 80}>
                   <Link
@@ -86,19 +85,7 @@ export default function ServicesIndexPage() {
                         </div>
                       )}
                     </div>
-                    {icon && (
-                      <div className="absolute top-36 left-5 z-10 inline-flex items-center justify-center w-12 h-12 rounded-full bg-primaryLight shadow-glow border-2 border-background">
-                        <img
-                          src={icon}
-                          alt=""
-                          aria-hidden="true"
-                          width={26}
-                          height={26}
-                          style={{ filter: 'brightness(0) saturate(100%) invert(16%) sepia(87%) saturate(4050%) hue-rotate(282deg) brightness(82%) contrast(101%)' }}
-                        />
-                      </div>
-                    )}
-                    <div className="p-6 pt-8">
+                    <div className="p-6">
                       <h3 className="font-heading font-extrabold text-textPrimary text-xl md:text-2xl leading-tight">
                         {s.name}
                       </h3>

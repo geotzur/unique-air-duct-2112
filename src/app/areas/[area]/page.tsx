@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { areas, services, company, phoneHref } from '@/lib/data';
-import { getAreaImage, getServiceIcon, fallbackGradient } from '@/lib/images';
+import { getAreaImage, getServiceImage, fallbackGradient } from '@/lib/images';
 import Reveal from '@/components/Reveal';
 import PillButton from '@/components/PillButton';
 import Swoosh from '@/components/Swoosh';
@@ -153,36 +153,43 @@ export default function AreaDetailPage({ params }: { params: { area: string } })
         <div className="mt-10 max-w-[100vw] overflow-x-auto no-scrollbar">
           <div className="flex gap-5 md:gap-6 px-4 md:px-12 pb-6 min-w-max">
             {services.map(s => {
-              const icon = getServiceIcon(s.slug);
+              const sImg = getServiceImage(s.slug);
               return (
                 <Link
                   key={s.slug}
                   href={`/areas/${a.slug}/${s.slug}/`}
-                  className="group relative w-[280px] md:w-[320px] shrink-0 bg-surface rounded-bento border border-border p-6 hover:shadow-glow hover:-translate-y-1 transition-all duration-500"
+                  className="group relative w-[280px] md:w-[320px] shrink-0 bg-surface rounded-bento border border-border overflow-hidden hover:shadow-glow hover:-translate-y-1 transition-all duration-500"
                 >
                   <span className="sweep-border" aria-hidden="true" />
-                  {icon && (
-                    <span className="inline-flex w-12 h-12 rounded-full bg-primaryLight items-center justify-center">
-                      <img
-                        src={icon}
-                        alt=""
-                        aria-hidden="true"
-                        width={26}
-                        height={26}
-                        style={{ filter: 'brightness(0) saturate(100%) invert(16%) sepia(87%) saturate(4050%) hue-rotate(282deg) brightness(82%) contrast(101%)' }}
+                  <div className="relative h-40 md:h-44 overflow-hidden">
+                    {sImg ? (
+                      <Image
+                        src={sImg}
+                        alt={s.name}
+                        fill
+                        style={{ objectFit: 'cover' }}
+                        sizes="320px"
+                        className="transition-transform duration-[1200ms] group-hover:scale-105"
                       />
+                    ) : (
+                      <div
+                        className="w-full h-full"
+                        style={{ backgroundImage: fallbackGradient(s.slug) }}
+                      />
+                    )}
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-heading font-extrabold text-textPrimary text-xl leading-tight">
+                      {s.name}
+                    </h3>
+                    <p className="mt-3 text-textSecondary text-[14px] leading-relaxed line-clamp-3">
+                      {s.short_description}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-1.5 font-body font-bold text-primary text-[13px]">
+                      In {a.name}
+                      <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </span>
-                  )}
-                  <h3 className="mt-5 font-heading font-extrabold text-textPrimary text-xl leading-tight">
-                    {s.name}
-                  </h3>
-                  <p className="mt-3 text-textSecondary text-[14px] leading-relaxed line-clamp-3">
-                    {s.short_description}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 font-body font-bold text-primary text-[13px]">
-                    In {a.name}
-                    <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-                  </span>
+                  </div>
                 </Link>
               );
             })}
@@ -204,12 +211,20 @@ export default function AreaDetailPage({ params }: { params: { area: string } })
               <li className="flex gap-3 items-start"><span className="w-4 h-4 mt-0.5 inline-block rounded-full bg-secondary" /> Average response in {a.name}: under 3 hours</li>
             </ul>
           </div>
-          <div className="relative aspect-[4/3] rounded-bento overflow-hidden bg-hero-gradient flex items-center justify-center">
-            <Swoosh variant={1} opacity={0.14} className="-left-10 top-10 w-[500px]" />
-            <div className="relative text-center text-background px-6">
-              <MapPin size={36} className="text-secondary mx-auto" />
-              <div className="mt-4 font-heading font-black uppercase text-3xl md:text-4xl">{a.name}</div>
-              <div className="mt-1 text-background/75 text-[13px] font-body font-semibold uppercase tracking-stamp">Florida</div>
+          <div className="relative aspect-[4/3] rounded-bento overflow-hidden border-4 border-background/60 shadow-deep">
+            <iframe
+              title={`Map of ${a.name}, ${company.state_full}`}
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(`${a.name}, ${company.city}, ${company.state_full}`)}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="absolute inset-0 w-full h-full border-0"
+              allowFullScreen
+            />
+            <div className="pointer-events-none absolute left-4 bottom-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-pill bg-background/95 backdrop-blur-sm border border-border shadow-deep">
+              <MapPin size={14} className="text-primary" />
+              <span className="font-body font-bold text-textPrimary text-[12px] uppercase tracking-stamp">
+                {a.name}, {company.state}
+              </span>
             </div>
           </div>
         </div>
