@@ -1,0 +1,59 @@
+{
+  "hero": "/images/hero.jpg",
+  "hero_portrait": null,
+  "about": "/images/about-team.jpg",
+  "cta_bg": "/images/cta-background.jpg",
+  "services": {
+    "commercial-air-duct-cleaning": "/images/service-commercial-air-duct-cleaning.jpg",
+    "dryer-vent-cleaning": "/images/service-dryer-vent-cleaning.jpg",
+    "hvac-system-sanitization": "/images/service-hvac-system-sanitization.jpg",
+    "residential-air-duct-cleaning": "/images/service-residential-air-duct-cleaning.jpg"
+  },
+  "areas": {
+    "beverly-hills": "/images/area-beverly-hills.jpg",
+    "burbank": "/images/area-burbank.jpg",
+    "culver-city": "/images/area-culver-city.jpg",
+    "glendale": "/images/area-glendale.jpg",
+    "hollywood": "/images/area-hollywood.jpg",
+    "long-beach": "/images/area-long-beach.jpg",
+    "pasadena": "/images/area-pasadena.jpg",
+    "santa-monica": "/images/area-santa-monica.jpg"
+  },
+  "before_after": {
+    "residential-air-duct-cleaning": {
+      "after": "/images/after-residential-air-duct-cleaning.jpg",
+      "before": "/images/before-residential-air-duct-cleaning.jpg"
+    }
+  },
+  "reuse_map": {
+    "service:indoor-air-quality-testing": "/images/service-residential-air-duct-cleaning.jpg",
+    "service:attic-insulation-replacement": "/images/service-commercial-air-duct-cleaning.jpg",
+    "service:mold-remediation-in-air-ducts": "/images/service-dryer-vent-cleaning.jpg",
+    "service:chimney-sweep-and-inspection": "/images/service-hvac-system-sanitization.jpg",
+    "service:uv-air-purification-installation": "/images/service-residential-air-duct-cleaning.jpg",
+    "service:coil-and-blower-cleaning": "/images/service-commercial-air-duct-cleaning.jpg",
+    "area:culver-city": "/images/area-beverly-hills.jpg"
+  },
+  "icons": {
+    "attic-insulation-replacement": "/icons/service-attic-insulation-replacement.svg",
+    "chimney-sweep-and-inspection": "/icons/service-chimney-sweep-and-inspection.svg",
+    "coil-and-blower-cleaning": "/icons/service-coil-and-blower-cleaning.svg",
+    "commercial-air-duct-cleaning": "/icons/service-commercial-air-duct-cleaning.svg",
+    "dryer-vent-cleaning": "/icons/service-dryer-vent-cleaning.svg",
+    "hvac-system-sanitization": "/icons/service-hvac-system-sanitization.svg",
+    "indoor-air-quality-testing": "/icons/service-indoor-air-quality-testing.svg",
+    "mold-remediation-in-air-ducts": "/icons/service-mold-remediation-in-air-ducts.svg",
+    "residential-air-duct-cleaning": "/icons/service-residential-air-duct-cleaning.svg",
+    "uv-air-purification-installation": "/icons/service-uv-air-purification-installation.svg"
+  },
+  "utility_icons": {
+    "step-1": "/icons/step-1.svg",
+    "step-2": "/icons/step-2.svg",
+    "step-3": "/icons/step-3.svg",
+    "step-4": "/icons/step-4.svg",
+    "why-1": "/icons/why-1.svg",
+    "why-2": "/icons/why-2.svg",
+    "why-3": "/icons/why-3.svg",
+    "why-4": "/icons/why-4.svg"
+  }
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <!-- Sprayer bottle body -->
+  <rect x="8" y="12" width="20" height="24"
+    fill="none" stroke="hsl(6, 60%, 28%)" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Sprayer nozzle/pump mechanism -->
+  <path d="M 28 12 L 28 6 Q 30 4 32 6 L 32 10 L 30 12 Z"
+    fill="none" stroke="hsl(6, 60%, 28%)" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Sanitizing mist/spray droplets (represented by three small closed circles within one path) -->
+  <path d="M 34 8 m -1.5 0 a 1.5 1.5 0 1 0 3 0 a 1.5 1.5 0 1 0 -3 0 Z 
+           M 38 12 m -1 0 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0 Z 
+           M 36 4 m -1 0 a 1 1 0 1 0 2 0 a 1 1 0 1 0 -2 0 Z"
+    fill="none" stroke="hsl(6, 60%, 28%)" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

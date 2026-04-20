@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <path
+    d="M 8 8 H 40 V 14 H 8 Z"
+    fill="none"
+    stroke="hsl(6, 60%, 28%)"
+    stroke-width="2.0"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M 21 14 C 18 18, 16 26, 20 30 C 24 34, 20 36, 24 38 L 27 38 C 31 36, 34 34, 30 30 C 26 26, 26 18, 27 14 Z"
+    fill="none"
+    stroke="hsl(6, 60%, 28%)"
+    stroke-width="2.0"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M 10 44 L 38 44 C 34 40, 28 39, 24 38 C 20 39, 14 40, 10 44 Z"
+    fill="none"
+    stroke="hsl(6, 60%, 28%)"
+    stroke-width="2.0"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

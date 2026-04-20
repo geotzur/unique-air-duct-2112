@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+*.DS_Store
+.env
+.env.local
+company_info.json
+content.json
+logo_analysis.json
+logo.jpg
+.builds_protected

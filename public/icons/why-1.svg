@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="hsl(6, 60%, 28%)" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Camera body with rounded corners -->
+  <rect x="6" y="16" width="24" height="16" rx="3" ry="3" />
+  <!-- Camera lens -->
+  <circle cx="18" cy="24" r="7" />
+  <!-- Hourglass symbol representing "Before and After" -->
+  <path d="M 36 12 L 40 12 L 38 24 L 40 36 L 36 36 L 38 24 Z" />
+</svg>

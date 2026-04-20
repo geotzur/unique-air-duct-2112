@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #B41FCF;
+  --color-primary-light: #F3E3F6;
+  --color-primary-dark: #63176F;
+  --color-secondary: #35C451;
+  --color-accent: #FFCF2A;
+  --color-background: #FDF9F5;
+  --color-surface: #F6EDF7;
+  --color-surface-dark: #1D0B24;
+  --color-text-primary: #1B0920;
+  --color-text-secondary: #5A4861;
+  --color-text-light: #9E8AA5;
+  --color-border: #E7D9E9;
+  --swiper-theme-color: #B41FCF;
+  --swiper-pagination-color: #B41FCF;
+  --swiper-navigation-color: #B41FCF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+
+h1 { line-height: 1.05; }
+h3 { line-height: 1.12; }
+
+/* Section label — HashiCorp wayfinding stamp */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+}
+.section-label::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: var(--color-secondary);
+  box-shadow: 0 0 0 4px rgba(53,196,81,0.18);
+}
+.section-label-light {
+  color: rgba(253,249,245,0.92);
+}
+.section-label-light::before {
+  background-color: var(--color-secondary);
+}
+
+/* Cream ribbon banner with pointed pennant right end */
+.ribbon {
+  position: relative;
+  display: inline-block;
+  padding: 18px 44px 18px 28px;
+  background-color: var(--color-background);
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 0 100%);
+  box-shadow: 0 4px 16px rgba(29,11,36,0.22);
+}
+.ribbon-sm {
+  padding: 10px 32px 10px 18px;
+}
+
+/* Pill CTA — Binance steal, spring overshoot, liquid fill */
+.btn-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 56px;
+  padding: 0 40px;
+  border-radius: 50px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-pill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  transform: translate(-100%, 100%);
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.btn-pill > * {
+  position: relative;
+  z-index: 1;
+}
+.btn-pill:hover::before {
+  transform: translate(0, 0);
+}
+.btn-pill-primary {
+  background-color: var(--color-secondary);
+  color: var(--color-surface-dark);
+  box-shadow: 0 10px 28px rgba(53,196,81,0.32);
+}
+.btn-pill-primary::before {
+  background-color: var(--color-primary);
+}
+.btn-pill-primary:hover {
+  color: #FDF9F5;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(180,31,207,0.38);
+}
+.btn-pill-secondary {
+  background-color: transparent;
+  color: var(--color-background);
+  border: 2px solid var(--color-background);
+}
+.btn-pill-secondary::before {
+  background: linear-gradient(180deg, var(--color-primary), var(--color-primary-dark));
+}
+.btn-pill-secondary:hover {
+  color: var(--color-background);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+.btn-pill-ghost-dark {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+.btn-pill-ghost-dark::before {
+  background-color: var(--color-primary);
+}
+.btn-pill-ghost-dark:hover {
+  color: var(--color-background);
+}
+.btn-pill-sm {
+  height: 44px;
+  padding: 0 26px;
+  font-size: 15px;
+}
+
+/* Airflow swoosh base */
+.swoosh {
+  position: absolute;
+  pointer-events: none;
+  color: var(--color-secondary);
+  opacity: 0.14;
+  will-change: transform;
+}
+
+/* Noise grain */
+.noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* Reveal-on-view (CSS only, IntersectionObserver class toggle) */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+              transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ribbon divider variant (inline banner) */
+.ribbon-divider {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 44px 14px 22px;
+  background: var(--color-background);
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-primary-dark);
+  box-shadow: 0 4px 16px rgba(29,11,36,0.2);
+}
+
+/* Dot pattern utility */
+.dot-pattern {
+  background-image: radial-gradient(circle, rgba(231,217,233,0.85) 1.3px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+.dot-pattern-dark {
+  background-image: radial-gradient(circle, rgba(253,249,245,0.14) 1.3px, transparent 1.5px);
+  background-size: 28px 28px;
+}
+
+/* Diagonal stripe pattern */
+.stripe-pattern {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(180,31,207,0.04) 0px,
+    rgba(180,31,207,0.04) 2px,
+    transparent 2px,
+    transparent 12px
+  );
+}
+
+/* Sparkle for accent moments */
+.sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: var(--color-secondary);
+  box-shadow: 0 0 0 0 rgba(53,196,81,0.6);
+  animation: sparklePulse 2.4s ease-in-out infinite;
+}
+
+/* Swiper overrides */
+.swiper-button-next, .swiper-button-prev {
+  color: var(--color-primary) !important;
+}
+.swiper-pagination-bullet-active {
+  background: var(--color-primary) !important;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  z-index: 80;
+  transform-origin: 0 0;
+  pointer-events: none;
+}
+
+/* Service-card left-border sweep */
+.sweep-border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--color-primary);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.group:hover .sweep-border { transform: scaleY(1); }
+
+/* Hide scrollbar on mobile carousels */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Large outlined number (process steps + FAQ) */
+.outline-num {
+  -webkit-text-stroke: 2px var(--color-primary);
+  color: transparent;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900;
+  line-height: 0.9;
+  transition: color 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              -webkit-text-stroke-color 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.group:hover .outline-num {
+  color: var(--color-primary);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Prevent horizontal scroll globally */
+html, body { overflow-x: hidden; max-width: 100vw; }

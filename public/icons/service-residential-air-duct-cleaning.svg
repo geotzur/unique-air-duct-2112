@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="hsl(6, 60%, 28%)" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Path 1: Represents a rectangular air duct -->
+  <path d="M 4 14 L 44 14 L 44 34 L 4 34 Z" />
+  <!-- Path 2: Represents the circular head of a cleaning brush, inside the duct -->
+  <path d="M 20 18 A 6 6 0 1 0 20 30 A 6 6 0 1 0 20 18 Z" />
+  <!-- Path 3: Represents the handle of the cleaning brush, extending from the head -->
+  <path d="M 26 22 L 46 22 L 46 26 L 26 26 Z" />
+</svg>

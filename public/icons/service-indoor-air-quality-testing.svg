@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+    <!-- Main device body: A rounded rectangle -->
+    <path d="M 10 8 H 38 A 2 2 0 0 1 40 10 V 38 A 2 2 0 0 1 38 40 H 10 A 2 2 0 0 1 8 38 V 10 A 2 2 0 0 1 10 8 Z" fill="none" stroke="hsl(6, 60%, 28%)" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Screen display area: A smaller rounded rectangle inside the device body -->
+    <path d="M 14 12 H 34 A 1 1 0 0 1 35 13 V 24 A 1 1 0 0 1 34 25 H 14 A 1 1 0 0 1 13 24 V 13 A 1 1 0 0 1 14 12 Z" fill="none" stroke="hsl(6, 60%, 28%)" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Sensor vent and air quality data graph on screen -->
+    <path d="
+        <!-- Sensor vent on the side of the device -->
+        M 36 15 H 39 V 23 H 36 Z 
+        <!-- Stylized air quality data graph (closed wavy band) on the screen -->
+        M 16 23 C 19 21, 22 25, 25 23 S 29 27, 32 25 V 21 C 29 19, 25 23, 22 21 S 19 25, 16 23 Z
+    " fill="none" stroke="hsl(6, 60%, 28%)" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
