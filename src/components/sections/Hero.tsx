@@ -12,8 +12,8 @@ export default function Hero() {
   const hero = content.home.hero;
   const heroImg = getHeroImage();
 
-  // Split headline into three lines for the tilted ribbon stack
-  const lines = ['Breathe Cleaner', 'Miami', 'Air'];
+  // Split headline into three lines for the soft bubble stack
+  const lines = ['Breathe Cleaner', 'California', 'Air'];
 
   return (
     <section className="relative min-h-[92vh] md:min-h-screen flex items-center overflow-hidden pt-24 md:pt-32 pb-20 md:pb-24">
@@ -83,20 +83,19 @@ export default function Hero() {
             {hero.badge}
           </div>
 
-          {/* 3 stacked tilted ribbons */}
-          <div className="mt-7 md:mt-9 flex flex-col items-center lg:items-start gap-3 md:gap-4">
+          {/* 3 stacked soft rounded bubbles */}
+          <div className="mt-7 md:mt-9 flex flex-col items-center lg:items-start gap-4 md:gap-5">
             {lines.map((line, i) => {
-              const tilts = [-1.5, 1, -2];
+              const variants = ['bubble-title', 'bubble-title bubble-title-accent', 'bubble-title bubble-title-green'];
               return (
                 <div
                   key={i}
-                  className="ribbon animate-ribbonIn max-w-full"
+                  className={`${variants[i]} animate-springIn max-w-full`}
                   style={{
-                    transform: `rotate(${tilts[i]}deg)`,
                     animationDelay: `${0.12 * i}s`,
                   }}
                 >
-                  <span className="font-heading font-black uppercase tracking-tight2 text-textPrimary leading-[0.95] text-[clamp(34px,8vw,96px)] block">
+                  <span className="font-rounded font-semibold text-textPrimary leading-[1.0] tracking-[-0.005em] text-[clamp(32px,7.2vw,84px)] block">
                     {line}
                   </span>
                 </div>

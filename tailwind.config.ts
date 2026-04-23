@@ -22,6 +22,7 @@ const config: Config = {
       fontFamily: {
         heading: ["'Barlow Condensed'", "'Arial Narrow'", 'system-ui', 'sans-serif'],
         body: ["'Nunito'", '-apple-system', 'BlinkMacSystemFont', "'Segoe UI'", 'system-ui', 'sans-serif'],
+        rounded: ["'Fredoka'", "'Nunito'", '-apple-system', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         whisper: '0 2px 8px rgba(29,11,36,0.06)',

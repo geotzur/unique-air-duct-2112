@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Nunito:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -89,6 +89,30 @@ h3 { line-height: 1.12; }
 }
 .ribbon-sm {
   padding: 10px 32px 10px 18px;
+}
+
+/* Soft rounded bubble — hero headline variant (no pennant, friendly & calm) */
+.bubble-title {
+  position: relative;
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: var(--color-background);
+  border-radius: 9999px;
+  box-shadow: 0 10px 30px rgba(29,11,36,0.18);
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .bubble-title {
+    padding: 20px 44px;
+    border-radius: 9999px;
+  }
+}
+.bubble-title-accent {
+  background-color: var(--color-accent);
+}
+.bubble-title-green {
+  background-color: var(--color-secondary);
+  color: var(--color-surface-dark);
 }
 
 /* Pill CTA — Binance steal, spring overshoot, liquid fill */
