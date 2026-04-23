@@ -41,10 +41,10 @@ export default function Header() {
         }`}
       >
         <div
-          className={`mx-auto transition-all duration-500 ${
+          className={`mx-auto transition-all duration-500 rounded-pill bg-background/90 backdrop-blur-xl border border-border ${
             scrolled
-              ? 'max-w-4xl rounded-pill bg-background/85 backdrop-blur-xl border border-border shadow-glow'
-              : 'max-w-7xl'
+              ? 'max-w-4xl shadow-glow'
+              : 'max-w-7xl shadow-whisper'
           }`}
         >
           <div
@@ -54,7 +54,7 @@ export default function Header() {
           >
             <Link href="/" className="flex items-center gap-3 shrink-0" aria-label={company.name}>
               <span
-                className={`inline-flex items-center justify-center rounded-md bg-background p-1 shadow-whisper ${
+                className={`inline-flex items-center justify-center rounded-md bg-background p-1 shadow-whisper border border-border ${
                   scrolled ? 'h-9' : 'h-10 md:h-12'
                 }`}
               >
@@ -65,8 +65,8 @@ export default function Header() {
                 />
               </span>
               <span
-                className={`font-heading font-extrabold uppercase tracking-tight2 leading-none ${
-                  scrolled ? 'text-textPrimary text-[15px]' : 'text-background text-lg md:text-xl'
+                className={`font-heading font-extrabold uppercase tracking-tight2 leading-none text-textPrimary ${
+                  scrolled ? 'text-[15px]' : 'text-lg md:text-xl'
                 }`}
               >
                 Unique<span className="text-secondary">.</span>
@@ -78,9 +78,7 @@ export default function Header() {
                 <Link
                   key={l.href}
                   href={l.href}
-                  className={`font-body font-semibold text-[15px] transition-colors duration-300 hover:text-secondary ${
-                    scrolled ? 'text-textPrimary' : 'text-background'
-                  }`}
+                  className="font-body font-semibold text-[15px] transition-colors duration-300 text-textPrimary hover:text-secondary"
                 >
                   {l.label}
                 </Link>
@@ -90,9 +88,7 @@ export default function Header() {
             <div className="flex items-center gap-3">
               <Link
                 href={phoneHref}
-                className={`hidden lg:inline-flex items-center gap-2 font-body font-semibold text-[14px] transition-colors duration-300 ${
-                  scrolled ? 'text-primaryDark hover:text-primary' : 'text-background/80 hover:text-background'
-                }`}
+                className="hidden lg:inline-flex items-center gap-2 font-body font-semibold text-[14px] transition-colors duration-300 text-primaryDark hover:text-primary"
               >
                 <Phone size={16} /> {company.phone}
               </Link>
@@ -105,9 +101,7 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => setOpen(v => !v)}
-                className={`md:hidden inline-flex items-center justify-center w-11 h-11 rounded-pill transition-colors ${
-                  scrolled ? 'bg-surface text-textPrimary' : 'bg-background/15 text-background backdrop-blur-md'
-                }`}
+                className="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-pill transition-colors bg-surface text-textPrimary"
                 aria-label={open ? 'Close menu' : 'Open menu'}
                 aria-expanded={open}
               >
