@@ -75,6 +75,20 @@
       "status": "success",
       "netlify_url": "https://meek-beijinho-96f302.netlify.app",
       "duration_sec": 329.6
+    },
+    {
+      "ts": "2026-04-23T12:50:26.089405+00:00",
+      "thread_id": 217,
+      "request": "יש מקומות שהheader  מופיע על דף לבן ואז לא רואים את הכפתורים בכלל.\nזה בעייתי מאד",
+      "scope": "surgical",
+      "type": "Bug",
+      "files_changed": [
+        "src/components/Header.tsx"
+      ],
+      "summary": "Inspected Header.tsx — both scrolled and non-scrolled branches now render bg-background/90 pill with border + text-textPrimary; logo tile gained a border so it reads cleanly against the same-color pill; mobile menu button unified to bg-surface in both states. Confirmed out/ was produced with all exp",
+      "status": "success",
+      "netlify_url": "https://meek-beijinho-96f302.netlify.app",
+      "duration_sec": 420.6
     }
   ]
 }

@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { content, phoneHref } from '@/lib/data';
 import { getHeroImage } from '@/lib/images';
 import PillButton from '@/components/PillButton';
@@ -17,10 +16,31 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[92vh] md:min-h-screen flex items-center overflow-hidden pt-24 md:pt-32 pb-20 md:pb-24">
-      {/* Gradient background */}
+      {/* Full-screen background image */}
+      {heroImg && (
+        <div aria-hidden="true" className="absolute inset-0">
+          <Image
+            src={heroImg}
+            alt=""
+            fill
+            priority
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            sizes="100vw"
+          />
+        </div>
+      )}
+      {/* Brand-colored overlay on top of image for text readability */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-hero-gradient-mobile md:bg-hero-gradient"
+        className="absolute inset-0 bg-hero-gradient-mobile md:bg-hero-gradient opacity-80"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(29,11,36,0.45) 0%, rgba(29,11,36,0.25) 45%, rgba(29,11,36,0.65) 100%)',
+        }}
       />
       {/* Airflow swoosh layers */}
       <Swoosh
@@ -42,42 +62,8 @@ export default function Hero() {
       />
       <div className="noise" aria-hidden="true" />
 
-      {/* Right-side hero photo with magenta-glow disk */}
-      {heroImg && (
-        <div
-          aria-hidden="true"
-          className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[44%] h-[78%] pointer-events-none"
-        >
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                'radial-gradient(circle at 40% 50%, rgba(180,31,207,0.55) 0%, transparent 60%)',
-            }}
-          />
-          <div className="absolute right-4 top-1/2 -translate-y-1/2 w-[85%] h-[85%] rounded-[40px] overflow-hidden shadow-deep border-4 border-background/10">
-            <Image
-              src={heroImg}
-              alt="Technician performing duct cleaning in a Miami home"
-              fill
-              priority
-              style={{ objectFit: 'cover' }}
-              sizes="(min-width: 1024px) 44vw, 0px"
-            />
-            <div
-              aria-hidden="true"
-              className="absolute inset-0"
-              style={{
-                background:
-                  'linear-gradient(180deg, transparent 40%, rgba(29,11,36,0.35) 100%)',
-              }}
-            />
-          </div>
-        </div>
-      )}
-
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 items-center">
-        <div className="text-center lg:text-left">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-4 md:px-6 lg:px-8">
+        <div className="text-center lg:text-left max-w-3xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-pill bg-background/12 backdrop-blur-md border border-background/18 text-background/90 text-[12px] md:text-[13px] font-body font-semibold uppercase tracking-stamp">
             <span className="w-2 h-2 rounded-full bg-secondary animate-sparklePulse" />
             {hero.badge}
@@ -134,27 +120,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Mobile photo */}
-        {heroImg && (
-          <div className="lg:hidden relative mt-4 mx-auto w-[90%] aspect-[4/5] rounded-[28px] overflow-hidden shadow-deep border-4 border-background/10">
-            <Image
-              src={heroImg}
-              alt="Technician performing duct cleaning in a Miami home"
-              fill
-              priority
-              style={{ objectFit: 'cover' }}
-              sizes="90vw"
-            />
-            <div
-              aria-hidden="true"
-              className="absolute inset-0"
-              style={{
-                background:
-                  'linear-gradient(180deg, transparent 45%, rgba(29,11,36,0.4) 100%)',
-              }}
-            />
-          </div>
-        )}
       </div>
 
       {/* Bottom vignette to soften into stats section */}
